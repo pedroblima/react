@@ -1,0 +1,12 @@
+importar react bootstrap
+npm install react-bootstrap bootstrap
+
+importar css
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+import { Button } from 'bootstrap';
+
+
+git config --global user.name "Pedro lima"
+$ git config --global user.email pedrob@iesb.edu.br
