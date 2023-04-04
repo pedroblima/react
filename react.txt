@@ -8,8 +8,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'bootstrap';
 
 
-git config --global user.name "Pedro lima"
-$ git config --global user.email pedrob@iesb.edu.br
+git config --global user.name "pedroblima"
+git config --global user.email "pedrob@iesb.edu.br"
+git commit -m "terceiro commit"
+git push -u origin main
 
 
 // map (loop)
