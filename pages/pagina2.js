@@ -7,11 +7,14 @@ import Pagina from '../components/Pagina';
 export default function Home() {
   return (
     <>
-      <Pagina />
-      <Container>
-        <h1>Página 2</h1>
-        <Rodape />
-      </Container>
+      <Pagina titulo="Pagina 2" />
+      
+      
+      
+     
+
+
+      
     </>
   )
 }
