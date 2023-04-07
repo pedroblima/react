@@ -1,6 +1,7 @@
 import React from 'react'
 import Pagina from '../components/Pagina'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Card } from 'react-bootstrap';
 
 const objeto = () => {
 
@@ -16,16 +17,29 @@ const objeto = () => {
 
   return (
     <Pagina titulo="objetos">
-        {carro.map(item => (
-          <div>
-            <h1>{item.marca} - {item.modelo}</h1>
-            <p>Ano: {item.ano}</p>
-            <p>Cor: {item.cor}</p>
-            <img src={item.foto} alt={item.modelo}></img>
-          </div>
-        ))}
+      <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src="data:image/jpeg;base64,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" />
+        <Card.Body>
+          <Card.Title>Chevette 4p</Card.Title>
+          <Card.Text>
+            {}
+          </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+        </Card.Body>
+      </Card>
     </Pagina>
   )
 }
 
 export default objeto
+
+
+
+
+/*{carro.map(item => (
+          <div>
+            <h1>{item.marca} - {item.modelo}</h1>
+            <p>Ano: {item.ano}</p>
+            <p>Cor: {item.cor}</p>
+            <img src={item.foto} alt={item.modelo}></img>
+          </div>*/
