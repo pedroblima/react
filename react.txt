@@ -32,3 +32,55 @@ npm install react-bootstrap bootstrap
 
 // criando projeto Next JS 
 npx create-next-app@latest
+
+// dados abertos deputados, (url base)
+https://dadosabertos.camara.leg.br/api/v2
+
+
+// criando projeto import 
+rafce 
+
+// extensao react 
+ES7+ 
+
+// estrutura do axios 
+import axios from "axios";
+
+
+const apiDeputados = axios.create({
+    baseURL: 'https://dadosabertos.camara.leg.br/api/v2'
+})
+
+
+export default apiDeputados
+
+
+// exemplo de code para hooks 
+/*const [nome, setNome] = useState('Orion')
+
+    /*let nome = 'Orion'*/
+
+    /*function alterarNome(){
+        console.log(nome)
+        if(nome == 'Orion'){
+            setNome('Orion Teles')
+
+        }else {
+            setNome('Orion')
+        }
+        console.log(nome)
+    }
+    
+        <Button onClick={alterarNome}>Alterar Nome</Button>
+*/
+// UseEffect 
+ const [deputados, setDeputados] = useState([])
+
+    useEffect(()=>{
+
+        apiDeputados.get('/deputados').then(resultado=>{
+           setDeputados(resultado.data.dados)
+        })
+
+
+    }, [])
