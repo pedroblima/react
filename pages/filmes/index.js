@@ -14,11 +14,11 @@ const index = () => {
 
     return (
         <Pagina titulo="Filmes">
-            <div>index</div>
+            <h1>Melhores Filmes do ano</h1>
 
             {filmes.map(item => (
                 <div>
-                    <img width='500' src={'https://image.tmdb.org/t/p/w500/' + item.poster_path} />
+                    <img width='200' src={'https://image.tmdb.org/t/p/w500/' + item.poster_path} />
                     <p>{item.title}</p>
                 </div>
             ))}
