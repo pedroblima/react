@@ -1,33 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import Pagina from '../../components/Pagina'
-import ApiFilmes from '../../services/ApiFilmes'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import apiFilmes from '../../services/apiFilmes'
 
+const index = () => {
 
-const hooks = () => {
-
-
-    const [Filmes, setFilmes] = useState([])
+    const [filmes, setFilmes] = useState([])
 
     useEffect(()=>{
-
-        ApiFilmes.get('/movie').then(resultado=>{
-           setFilmes(resultado.data.dados)
+        apiFilmes.get('/movie/popular').then(resultado=>{
+            setFilmes(resultado.data.results)
         })
     }, [])
-    
+
     return (
-    
-    
-    <Pagina titulo='Filmes'>
-        <h1>Hooks</h1>
-        {Filmes.map(item => (
-          <p>{item.nome}</p>
-        ))}
-    
-    
-    </Pagina>
-  )
+        <Pagina titulo="Filmes">
+            <div>index</div>
+
+            {filmes.map(item => (
+                <div>
+                    <img width='500' src={'https://image.tmdb.org/t/p/w500/' + item.poster_path} />
+                    <p>{item.title}</p>
+                </div>
+            ))}
+
+        </Pagina>
+    )
 }
 
-export default hooks
+export default index
