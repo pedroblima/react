@@ -7,14 +7,14 @@ const index = () => {
     const [filmes, setFilmes] = useState([])
 
     useEffect(()=>{
-        apiFilmes.get('/movie/uncoming').then(resultado=>{
+        apiFilmes.get('/movie/popular').then(resultado=>{
             setFilmes(resultado.data.results)
         })
     }, [])
 
     return (
         <Pagina titulo="Filmes">
-            <h1>Melhores Filmes do ano</h1>
+            <h1>Melhores Filmes</h1>
 
             {filmes.map(item => (
                 <div>
