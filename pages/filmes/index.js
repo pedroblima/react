@@ -7,7 +7,7 @@ const index = () => {
     const [filmes, setFilmes] = useState([])
 
     useEffect(()=>{
-        apiFilmes.get('/movie/upcoming').then(resultado=>{
+        apiFilmes.get('/movie/uncoming').then(resultado=>{
             setFilmes(resultado.data.results)
         })
     }, [])
