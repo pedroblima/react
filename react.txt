@@ -84,3 +84,12 @@ export default apiDeputados
 
 
     }, [])
+    
+    FIREBASE_API_KEY=AIzaSyBcuL3dHQHK-QJquz_Q31NA2Q1KT_9KR8w
+FIREBASE_AUTH_DOMAIN=academico-15a32.firebaseapp.com
+FIREBASE_DATABASE_URL=https://academico-15a32-default-rtdb.firebaseio.com
+FIREBASE_PROJECT_ID=academico-15a32
+FIREBASE_STORAGE_BUCKET=academico-15a32.appspot.com
+FIREBASE_MESSAGING_SENDER_ID=1092919759770
+FIREBASE_APP_ID=1:1092919759770:web:9c7b4edab481f55a4ee023
+
